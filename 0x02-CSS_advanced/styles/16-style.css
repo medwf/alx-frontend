@@ -10,8 +10,8 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
   --color-dark-grey: #353535;
   --text-color: var(--color-black);
 
-  --font-family-base: "Open Sans" "Helvetica Neue" Helvetica Arial sans-serif;
-  --font-family-title: 'Raleway' "Helvetica Neue" Helvetica Arial sans-serif;
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-title: 'Raleway', "Helvetica Neue", Helvetica, Arial sans-serif;
 
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem;
@@ -89,11 +89,6 @@ a[href]:active {
   font-weight: var(--font-weight-bold);
 }
 
-.container {
-  width: 980px;
-  margin: 0 auto;
-  /* border: #090909 solid 1px; */
-}
 .section-header {
   text-align: var(--section-header-align);
 }
@@ -104,4 +99,9 @@ a[href]:active {
   font-weight: var(--font-weight-bold);
   margin: var(--section-title-margin);
   color: var(--section-title-color);
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
 }
