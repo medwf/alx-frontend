@@ -1,0 +1,176 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+/* style for table */
+table {
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  width: 100%;
+  font-size: large;
+  font-weight: 500;
+}
+
+td, th {
+  text-align: left;
+  /* border: 1px solid black; */
+  padding: 8px;
+}
+td, th, th > a {
+  color: #ddd;
+}
+
+/* th {
+  background-color: #1d2a35;
+} */
+
+tr:nth-child(even) {
+  background-color: #1d2a35;
+}
+tr:nth-child(odd) {
+  background-color: #38444d;
+}
+
+thead > tr > th {
+  background-color: #1d2a35;
+}
+
+td > a {
+  text-decoration: underline;
+  padding: 14px;
+}
+
+td > a:hover {
+  color: green;
+}
+
+h2 > a {
+  color: black;
+}
+.container {
+  background-color: lightgray;
+  padding: 2px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.selectOption, h1 {
+  text-align: center;
+}
+
+h2, p {
+  text-align: center;
+}
+
+/* normal flex */
+.flex-box {
+  display: flex;
+  background-color: lightblue;
+}
+
+.flex-box > div {
+  background-color: lightslategray;
+  padding: 24px 30px;
+  margin: 12px;
+  font-size: 24px;
+}
+
+/* flex-direction */
+.flex-direction {
+  display: flex;
+  /* default take entire width */
+  /* column column-reverse row row-reverse */
+  flex-direction: column;
+  background-color: lightblue;
+}
+
+.flex-direction > div {
+  background-color: lightslategray;
+  padding: 24px 30px;
+  margin: 12px;
+  text-align: center;
+  width: 100px;
+  font-size: 24px;
+
+}
+
+/* flex-wrap */
+.flex-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: lightblue;
+}
+
+.flex-wrap > div {
+  width: 80px;
+  height: 20px;
+  background-color: lightslategray;
+  padding: 12px;
+  margin: 10px;
+}
+
+.flex-flow {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: lightblue;
+}
+
+.flex-flow > div {
+  width: 80px;
+  height: 20px;
+  background-color: lightslategray;
+  padding: 12px;
+  margin: 10px;
+}
+
+span {
+  background-color: rgb(187, 93, 93);
+}
+
+.flex-just {
+  display: flex;
+  justify-content: flex-start;
+  background-color: lightblue;
+}
+
+.flex-just > div {
+  width: 80px;
+  height: 20px;
+  background-color: lightslategray;
+  padding: 12px;
+  margin: 10px;
+}
+
+.align-items {
+  display: flex;
+  background-color: lightblue;
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
+  height: 200px;
+}
+
+.align-items > div {
+  width: 80px;
+  background-color: lightslategray;
+  padding: 12px;
+  margin: 10px;
+}
+
+.align-content {
+  display: flex;
+  background-color: lightblue;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 200px;
+}
+
+.align-content > div {
+  width: 80px;
+  background-color: lightslategray;
+  padding: 12px;
+  margin: 10px;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise form</title>
+  </head>
+  <body>
+    <h1>Travel reservation form</h1>
+    <p><b>* denotes mandatory</b></p>
+    <form action="api.domanName/reservation" method="post">
+      <!-- full name -->
+      <label for="fullname">* Full Name :</label><br />
+      <input
+        type="text"
+        id="fullname"
+        name="full_name"
+        placeholder="FirstName LastName"
+        value=""
+      /><br />
+
+      <!-- email -->
+      <label for="fullname">* Email Address :</label><br />
+      <input type="text" id="email" name="email" placeholder="Email_Address" />
+      <br />
+
+      <!-- package -->
+      <label for="package">* Select for package :</label><br />
+      <select name="package">
+        <option value="apt">apt for debian</option>
+        <option value="pacman">pacman for arch</option>
+        <option value="npm">node package manager</option>
+        <option value="opc">tkharbi9a</option>
+      </select>
+      <br />
+
+      <!-- Arrival date -->
+      <label for="date">* Arrival date :</label><br />
+      <input type="date" name="date" /><br />
+
+      <!-- number of person-->
+      <label for="Nperson">* The Number of Person :</label><br />
+      <input type="number" id="Nperson" name="Nperson" value="1" />
+      <br />
+
+      <!-- where you want to travel -->
+      <label for="placeTravel">* what would you want to Avail ?</label><br />
+
+      <label for="boarding">boarding</label>
+      <input type="checkbox" name="boarding" id="boarding" />
+      <br />
+
+      <label for="fooding">Fooding</label>
+      <input type="checkbox" name="fooding" id="fooding" />
+      <br />
+
+      <label for="SightSeeing">Sight Seeing</label>
+      <input type="checkbox" name="SightSeeing" id="SightSeeing" />
+      <br />
+
+      <!-- discount -->
+      <label for="discount">discount coupon code :</label><br />
+      <input type="text" name="discount" id="discount" /><br />
+
+      <!-- Term -->
+      <label for="term">* Terms and conditions :</label><br />
+      <input type="radio" id="email" name="term" value="agree" />
+      <label for="term">I agree</label><br />
+      <input type="radio" id="email" name="term" value="disagree" />
+      <label for="term">I disagree</label><br />
+
+      <input type="submit" value="complete reservation" />
+      <br />
+
+      <hr />
+      <div class="container">
+        <!-- Begins a container div -->
+        <h1>Travel reservation form</h1>
+        <!-- Displays the heading "Travel reservation form" -->
+        <h3>* denotes mandotory</h3>
+        <!-- Displays a note indicating mandatory fields -->
+        <form id="registration_form" method="POST" enctype="multipart/form-data">
+          <!-- Begins a form with the ID "registration_form" and using POST method -->
+          <label>Full name*:</label
+          ><br /><!-- Displays a label for full name input -->
+          <input
+            type="text"
+            name="full_name"
+            placeholder="FirstName LastName"
+            value=""
+          /><br /><!-- Creates a text input for full name with placeholder and autofocus -->
+          <label>Email address*:</label
+          ><br /><!-- Displays a label for email address input -->
+          <input
+            type="text"
+            name="email_addr"
+            value=""
+          /><br /><!-- Creates a text input for email address -->
+          <label>Select Tour Package* :</label
+          ><br /><!-- Displays a label for package selection -->
+          <select name="package">
+            <!-- Creates a dropdown menu for selecting a tour package -->
+            <option value="Goa">Goa</option>
+            <!-- Option for Goa package -->
+            <option value="Kashmir">Kashmir</option>
+            <!-- Option for Kashmir package -->
+            <option value="Rajasthan">Rajasthan</option>
+            <!-- Option for Rajasthan package --></select
+          ><br />
+          <label>Arrival date*:</label
+          ><br /><!-- Displays a label for arrival date input -->
+          <input
+            type="text"
+            name="arv_dt"
+            placeholder="m/d/y"
+            value=""
+          /><br /><!-- Creates a text input for arrival date with placeholder -->
+          <label>Number of persons*:</label
+          ><br /><!-- Displays a label for number of persons input -->
+          <input
+            type="text"
+            name="persons"
+            value=""
+          /><br /><!-- Creates a text input for number of persons -->
+          <label>What would you want to avail?*</label
+          ><br /><!-- Displays a label for facilities selection -->
+          Boarding<input
+            type="checkbox"
+            name="facilities[]"
+            value="boarding"
+          /><br /><!-- Checkbox for boarding -->
+          Fooding<input
+            type="checkbox"
+            name="facilities[]"
+            value="fooding"
+          /><br /><!-- Checkbox for fooding -->
+          Sight seeing<input
+            type="checkbox"
+            name="facilities[]"
+            value="sightseeing"
+          /><br /><!-- Checkbox for sight seeing -->
+          <label>Discount Coupon code:</label
+          ><br /><!-- Displays a label for discount coupon code input -->
+          <input
+            type="text"
+            name="dis_code"
+            value=""
+          /><br /><!-- Creates a text input for discount coupon code -->
+          <label>Terms and conditions*</label
+          ><br /><!-- Displays a label for terms and conditions -->
+          <input type="radio" name="tnc" value="agree" checked />I agree
+          <!-- Radio button for agreeing to terms -->
+          <input type="radio" name="tnc" value="disagree" />I disagree<br /><!-- Radio button for disagreeing to terms -->
+          <button type="submit" class="btn btn-large btn-primary" name="submit">
+            Complete reservation</button
+          ><!-- Submit button for completing reservation -->
+        </form>
+        <!-- Ends the form -->
+      </div>
+      <!-- Ends the container div -->
+    </form>
+  </body>
+</html>

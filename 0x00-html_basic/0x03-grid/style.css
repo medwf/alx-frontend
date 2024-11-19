@@ -1,0 +1,109 @@
+.container {
+  display: grid;
+
+  /* how many colum you need with size */
+  grid-template-columns: 100px 100px;
+  margin-bottom: 20px;
+}
+
+.div1 {
+  background-color: lightblue;
+}
+
+.div2 {
+  background-color:lightgreen;
+}
+
+.container2 {
+  display: grid;
+
+  /* how many colum you need with size */
+  grid-template-columns: 100px 1fr;
+  margin-bottom: 20px;
+}
+
+.container3 {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+}
+
+/* make a grid example */
+
+.grid-ex-col {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+.grid-ex-row {
+  display: grid;
+  grid-template-rows: 100px auto 70px;
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+
+.g-div {
+  padding: 20px;
+  text-align: center;
+  font-size: xx-large;
+  border: 1px solid black;
+  background-color: lightblue;
+}
+
+.grid-gap {
+  padding: 10px;
+  background-color: lightgreen;
+  
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border: 1px solid black;
+  
+  /* 20px for row. 10 px for column */
+  /* gap: 20px 10px; */
+  /* see also row-gap column-gap*/
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.g-line {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.g-div-line {
+  padding: 20px;
+  text-align: center;
+  font-size: xx-large;
+  border: 1px solid black;
+  background-color: lightblue;
+}
+
+.just-con {
+  padding: 10px;
+  background-color: lightgreen;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+
+  /* justify content */
+  /* justify-content: left; */
+}
+
+.page {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  background-color: lightgreen;
+  gap: 10px
+}
+
+.Gr {
+  padding: 16px;
+  background-color: lightblue;
+  text-align: center;
+
+}

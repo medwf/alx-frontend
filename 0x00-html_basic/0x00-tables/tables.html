@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+  </head>
+  <body>
+    <!--  -->
+    <h2>Create a simple Tables</h2>
+    <hr />
+    <!--
+    create a simple table:
+      elements:
+        thead/tbody/tfoot: does elements helps to fix 
+        th: table header. came with bold size.
+        tr: table row
+        td: table data.
+      Attributes:
+        border: size of table border.
+        cellpadding: space between Text data up/down/left/right
+        cellspacing: space between boxes
+        rowspan: number of row takes
+        colspan: number of col takes
+  -->
+    <table border="1" cellpadding="8" cellspacing="4">
+      <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>score</th>
+      </tr>
+      <tr>
+        <td>mohamed</td>
+        <td>28</td>
+        <td>18</td>
+      </tr>
+    </table>
+    <!-- new table:
+      
+    -->
+    <hr />
+    <h2>Using colspan/rowspan.</h2>
+    <table border="1" cellpadding="6" cellspacing="0">
+      <tr>
+        <th>colum 1</th>
+        <th>colum 2</th>
+        <th>colum 3</th>
+      </tr>
+      <!-- simple Row, Colum -->
+      <tr>
+        <td>row 1 in colum 1</td>
+        <td>row 1 in colum 2</td>
+        <td>row 1 in colum 3</td>
+      </tr>
+      <!-- one row with multi colum -->
+      <tr>
+        <td colspan="2">row 1 with 2 colum</td>
+        <td>row 1 with 1 colum</td>
+      </tr>
+      <tr>
+        <td colspan="3">row 1 with 2 colum</td>
+        <!--
+        That will be added next to last one.
+          <td>row 1 with 1 colum</td>
+          -->
+      </tr>
+      <!-- multi row in colum -->
+      <tr>
+        <td rowspan="2">two rows in first colum</td>
+        <td>colum 2</td>
+        <td>colum 3</td>
+      </tr>
+      <tr>
+        <td>colum 2</td>
+        <td>colum 3</td>
+      </tr>
+    </table>
+    <hr />
+    <!-- perfect table in html: -->
+    <h2>table with thead tbody tfoot</h2>
+    <table border="1" cellpadding="4" cellspacing="0">
+      <thead>
+        <th></th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>08:00</th>
+        </tr>
+        <tr>
+          <th>09:00</th>
+        </tr>
+        <tr>
+          <th>10:00</th>
+        </tr>
+        <tr>
+          <th>11:00</th>
+        </tr>
+        <tr>
+          <th>12:00</th>
+        </tr>
+        <tr>
+          <th>13:00</th>
+        </tr>
+        <tr>
+          <th>14:00</th>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+  </body>
+</html>

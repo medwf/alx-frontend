@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex, FlexBox</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <h1>Flex</h1>
+    <p>
+      The Flexible Box Layout Module, makes it easier to design flexible
+      responsive layout structure without using float or positioning.
+    </p>
+    <br />
+
+    <table cellpadding="10">
+      <caption style="text-decoration: underline">
+        <h2>The CSS Flexbox Container Properties</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><a href="#display">display</a></th>
+          <td>Specifies the type of box used for an HTML element</td>
+        </tr>
+        <tr>
+          <th><a href="#direction">flex-direction</a></th>
+          <td>
+            Specifies the direction of the flexible items inside a flex
+            container
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#wrap">flex-wrap</a></th>
+          <td>
+            Specifies whether the flex items should wrap or not, if there is not
+            enough room for them on one flex line
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#flow">flex-flow</a></th>
+          <td>A shorthand property for flex-direction and flex-wrap</td>
+        </tr>
+        <tr>
+          <th><a href="#just">justify-content</a></th>
+          <td>
+            Horizontally aligns the flex items when the items do not use all
+            available space on the main-axis
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#alignIt">align-items</a></th>
+          <td>
+            Vertically aligns the flex items when the items do not use all
+            available space on the cross-axis
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#alignCon">align-content</a></th>
+          <td>
+            Modifies the behavior of the flex-wrap property. It is similar to
+            align-items, but instead of aligning flex items, it aligns flex
+            lines
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- basic flex example  -->
+    <div class="container" id="display">
+      <h2><a href="#">Basic flex</a></h2>
+      <p>by default there is no wrap</p>
+      <div class="flex-box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+
+    <!-- wrap direction with multi value using javascript. -->
+    <div class="container" id="direction">
+      <h2><a href="#">flex-direction</a></h2>
+      <p>
+        The flex-direction property defines in which direction the container
+        wants to stack the flex items.
+      </p>
+      <div class="selectOption">
+        <label for="direction-value">direction value : </label>
+        <select id="direction-value" onchange="changeFlexDirection()">
+          <option value="column">Column</option>
+          <option value="column-reverse">column-reverse</option>
+          <option value="row">row</option>
+          <option value="row-reverse">row-reverse</option>
+        </select>
+      </div>
+      <div class="flex-direction">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+
+    <!-- flex wrap with multi value using javascript -->
+    <div class="container" id="wrap">
+      <h2><a href="#">flex wrap</a></h2>
+      <p>
+        The flex-wrap property specifies whether the flex items should wrap or
+        not.
+      </p>
+      <div class="selectOption">
+        <label for="flex-wrap">flex-wrap value : </label>
+        <select name="flexWrap" id="flexWrap" onchange="changeFlexWrap()">
+          <option value="nowrap" selected>no wrap</option>
+          <option value="wrap">wrap</option>
+          <option value="wrap-reverse">wrap rev</option>
+        </select>
+      </div>
+      <div class="flex-wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+
+    <!-- flex flow is shorthand for direction and wrap -->
+    <div class="container" id="flow">
+      <h2><a href="#">flex flow</a></h2>
+      <p>
+        The flex-flow property is a shorthand property for setting both the
+        flex-direction and flex-wrap properties.
+      </p>
+      <div class="selectOption">
+        <label for="flexFlowDirection">flex flow direction value : </label>
+        <select
+          name="flexFlowDirection"
+          id="flexFlowDirection"
+          onchange="changeFlexFlow()"
+        >
+          <option value="column" selected>Column</option>
+          <option value="column-reverse">column-reverse</option>
+          <option value="row">row</option>
+          <option value="row-reverse">row-reverse</option>
+        </select>
+        <label for="flexFlowWrap">flex flow wrap value : </label>
+        <select
+          name="flexFlowWrap"
+          id="flexFlowWrap"
+          onchange="changeFlexFlow()"
+        >
+          <option value="nowrap" selected>no wrap</option>
+          <option value="wrap">wrap</option>
+          <option value="wrap-reverse">wrap rev</option>
+        </select>
+      </div>
+      <div class="flex-flow">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+
+    <!-- flex justify contents -->
+    <div class="container" id="just">
+      <h2><a href="#">flex justify-content</a></h2>
+      <p>
+        The <span>justify-content</span> property is used to align the flex
+        items:
+        <b>horizontal</b>
+      </p>
+      <div class="selectOption">
+        <label for="flexJust">justify-content : </label>
+        <select name="flexJust" id="flexJust" onchange="changeFlexJust()">
+          <option value="flex-start" selected>flex start</option>
+          <option value="center">center</option>
+          <option value="flex-end">flex end</option>
+          <option value="space-around">space around</option>
+          <option value="space-between">space between</option>
+        </select>
+      </div>
+      <div class="flex-just">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+    </div>
+
+    <!-- align items -->
+    <div class="container" id="alignIt">
+      <h2><a href="#">align items</a></h2>
+      <p>
+        The <span>align-items</span> property is used to align the flex items.
+        <b>vertical</b>
+      </p>
+      <div class="selectOption">
+        <label for="alignItems">align-items value : </label>
+        <select name="alignItems" id="alignItems" onchange="changeAlignItems()">
+          <option value="flex-start" selected>flex start</option>
+          <option value="flex-end">flex end</option>
+          <option value="stretch">stretch</option>
+          <option value="baseline">baseline</option>
+        </select>
+      </div>
+      <div class="align-items">
+        <div class="div-al-il">1</div>
+        <div class="div-al-il">2</div>
+        <div class="div-al-il">3</div>
+        <div class="div-al-il">4</div>
+        <div class="div-al-il">5</div>
+        <div class="div-al-il">6</div>
+      </div>
+    </div>
+
+    <!-- align content -->
+    <div class="container" id="alignCon">
+      <h2><a href="#">align content</a></h2>
+      <p>
+        The <span>align-content</span> property is used to align the flex lines.
+        <br />
+        between row that was wrap
+      </p>
+      <div class="selectOption">
+        <label for="alignContent">align-content value : </label>
+        <select
+          name="alignContent"
+          id="alignContent"
+          onchange="changeAlignContent()"
+        >
+          <option value="flex-start" selected>flex start</option>
+          <option value="flex-end">flex end</option>
+          <option value="stretch">stretch</option>
+          <option value="baseline">baseline</option>
+        </select>
+      </div>
+      <div class="align-content">
+        <div class="div-Con-il">1</div>
+        <div class="div-Con-il">2</div>
+        <div class="div-Con-il">3</div>
+        <div class="div-Con-il">4</div>
+        <div class="div-Con-il">5</div>
+        <div class="div-Con-il">6</div>
+        <div class="div-Con-il">7</div>
+        <div class="div-Con-il">8</div>
+        <div class="div-Con-il">9</div>
+        <div class="div-Con-il">10</div>
+        <div class="div-Con-il">11</div>
+        <div class="div-Con-il">12</div>
+      </div>
+    </div>
+
+    <table cellpadding="10">
+      <caption style="text-decoration: underline">
+        <h2>The CSS Flexbox items Properties</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><a href="#display">display</a></th>
+          <td>Specifies the type of box used for an HTML element</td>
+        </tr>
+        <tr>
+          <th><a href="#direction">flex-direction</a></th>
+          <td>
+            Specifies the direction of the flexible items inside a flex
+            container
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#wrap">flex-wrap</a></th>
+          <td>
+            Specifies whether the flex items should wrap or not, if there is not
+            enough room for them on one flex line
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#flow">flex-flow</a></th>
+          <td>A shorthand property for flex-direction and flex-wrap</td>
+        </tr>
+        <tr>
+          <th><a href="#just">justify-content</a></th>
+          <td>
+            Horizontally aligns the flex items when the items do not use all
+            available space on the main-axis
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#alignIt">align-items</a></th>
+          <td>
+            Vertically aligns the flex items when the items do not use all
+            available space on the cross-axis
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#alignCon">align-content</a></th>
+          <td>
+            Modifies the behavior of the flex-wrap property. It is similar to
+            align-items, but instead of aligning flex items, it aligns flex
+            lines
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
