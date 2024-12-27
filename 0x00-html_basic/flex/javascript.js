@@ -71,3 +71,10 @@ function changeAlignContent() {
 
   flexAlignConElement.style.alignContent = flexAlignConValue;
 }
+
+function changeAlignSelf() {
+  const flexAlignSelfElement = document.getElementsByClassName("Self")[0];
+  const flexAlignSelfValue = document.getElementById("alignSelf").value;
+
+  flexAlignSelfElement.style.alignSelf = flexAlignSelfValue;
+}

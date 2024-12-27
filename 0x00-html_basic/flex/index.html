@@ -73,6 +73,56 @@
       </tbody>
     </table>
 
+    <table id="table-items">
+      <caption style="text-decoration: underline">
+        <h2>The CSS Flexbox Items Properties</h2>
+      </caption>
+      <tbody>
+        <tr>
+          <th style="width: 25%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <th><a href="#alignCon">align-self</a></th>
+          <td>
+            Specifies the alignment for a flex item (overrides the flex
+            container's align-items property)
+          </td>
+        </tr>
+        <tr>
+          <th><a href="#Order">order</a></th>
+          <td>
+            Specifies the order of the flex items inside the same container
+          </td>
+        </tr>
+        <tr>
+          <th><a href="">flex-basis</a></th>
+          <td>Specifies the initial length of a flex item</td>
+        </tr>
+        <tr>
+          <th><a href="">flex-grow</a></th>
+          <td>
+            Specifies how much a flex item will grow relative to the rest of the
+            flex items inside the same container
+          </td>
+        </tr>
+        <tr>
+          <th><a href="">flex-shrink</a></th>
+          <td>
+            Specifies how much a flex item will shrink relative to the rest of
+            the flex items inside the same container
+          </td>
+        </tr>
+        <tr>
+          <th><a href="">flex</a></th>
+          <td>
+            A shorthand property for the flex-grow, flex-shrink, and the
+            flex-basis properties
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <!-- basic flex example  -->
     <div class="container" id="display">
       <h2><a href="#">Basic flex</a></h2>
@@ -261,7 +311,6 @@
       <h2><a href="#">align content</a></h2>
       <p>
         The <span>align-content</span> property is used to align the flex lines.
-        <br />
         between row that was wrap
       </p>
       <div class="selectOption">
@@ -275,80 +324,63 @@
           <option value="flex-end">flex end</option>
           <option value="stretch">stretch</option>
           <option value="baseline">baseline</option>
+          <option value="center">center</option>
         </select>
+        <label for="alignCon"><strong>;</strong></label>
+        <h2><a href="#table-items">align-self</a></h2>
+        <p>
+          The align-self property specifies the alignment for the selected item
+          inside the flexible container.
+        </p>
+        <p>
+          The align-self property overrides the default alignment set by the
+          container's align-items property.
+        </p>
+        <!-- align self  -->
+        <label for="alignSelf">align-self: </label>
+        <select id="alignSelf" onchange="changeAlignSelf()">
+          <option value="flex-start" selected>flex start</option>
+          <option value="flex-end">flex end</option>
+          <option value="stretch">stretch</option>
+          <option value="baseline">baseline</option>
+          <option value="center">center</option>
+        </select>
+        <label for="alignSelf"><strong>;</strong></label>
       </div>
       <div class="align-content">
         <div class="div-Con-il">1</div>
         <div class="div-Con-il">2</div>
-        <div class="div-Con-il">3</div>
+        <div class="div-Con-il Self" style="align-self: flex-start">3</div>
         <div class="div-Con-il">4</div>
         <div class="div-Con-il">5</div>
         <div class="div-Con-il">6</div>
-        <div class="div-Con-il">7</div>
-        <div class="div-Con-il">8</div>
-        <div class="div-Con-il">9</div>
-        <div class="div-Con-il">10</div>
-        <div class="div-Con-il">11</div>
-        <div class="div-Con-il">12</div>
       </div>
     </div>
 
-    <table cellpadding="10">
-      <caption style="text-decoration: underline">
-        <h2>The CSS Flexbox items Properties</h2>
-      </caption>
-      <thead>
-        <tr>
-          <th>Property</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th><a href="#display">display</a></th>
-          <td>Specifies the type of box used for an HTML element</td>
-        </tr>
-        <tr>
-          <th><a href="#direction">flex-direction</a></th>
-          <td>
-            Specifies the direction of the flexible items inside a flex
-            container
-          </td>
-        </tr>
-        <tr>
-          <th><a href="#wrap">flex-wrap</a></th>
-          <td>
-            Specifies whether the flex items should wrap or not, if there is not
-            enough room for them on one flex line
-          </td>
-        </tr>
-        <tr>
-          <th><a href="#flow">flex-flow</a></th>
-          <td>A shorthand property for flex-direction and flex-wrap</td>
-        </tr>
-        <tr>
-          <th><a href="#just">justify-content</a></th>
-          <td>
-            Horizontally aligns the flex items when the items do not use all
-            available space on the main-axis
-          </td>
-        </tr>
-        <tr>
-          <th><a href="#alignIt">align-items</a></th>
-          <td>
-            Vertically aligns the flex items when the items do not use all
-            available space on the cross-axis
-          </td>
-        </tr>
-        <tr>
-          <th><a href="#alignCon">align-content</a></th>
-          <td>
-            Modifies the behavior of the flex-wrap property. It is similar to
-            align-items, but instead of aligning flex items, it aligns flex
-            lines
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- order -->
+    <div class="container" id="Order">
+      <h2><a href="#">Order</a></h2>
+      <p>The order property specifies the order of the flex items.</p>
+      <div class="align-order">
+        <div class="div-order" style="order: 4">item: 1 order: 4</div>
+        <div class="div-order" style="order: 3">item: 2 order: 3</div>
+        <div class="div-order" style="order: 1">item: 3 order: 1</div>
+        <div class="div-order" style="order: 2">item: 4 order: 2</div>
+      </div>
+    </div>
+
+    <!-- flex grow -->
+    <div class="container" id="Grow">
+      <h2><a href="#">flex-grow</a></h2>
+      <p>
+        The flex-grow property specifies how much a flex item will grow relative
+        to the rest of the flex items.
+      </p>
+      <div class="flex-grow">
+        <div class="div-order" style="flex-grow: 1">1</div>
+        <div class="div-order" style="flex-grow: 1">2</div>
+        <div class="div-order" style="flex-grow: 1">3</div>
+      </div>
+    </div>
   </body>
 </html>
